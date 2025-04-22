@@ -26,7 +26,7 @@ Siga os passos abaixo para configurar e executar o projeto:
 
 ```bash
 git clone https://github.com/seu-usuario/trabalho_agente_inteligente.git
-cd agente-inteligente
+cd trabalho_agente_inteligente
 ```
 
 ### 2. Crie e ative um ambiente virtual
