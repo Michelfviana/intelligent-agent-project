@@ -1,10 +1,10 @@
-% --- Fatos: locais
+% Fatos: locais
 lugar(biblioteca).
 lugar(cafe).
 lugar(sala_estudo).
 lugar(apartamento_amigo).
 
-% --- Fatos: características
+% Fatos: características
 silencioso(biblioteca).
 silencioso(sala_estudo).
 barulhento(cafe).
@@ -29,28 +29,20 @@ horario_funcionamento(cafe, tarde).
 horario_funcionamento(sala_estudo, noite).
 horario_funcionamento(apartamento_amigo, qualquer).
 
-ambiente_fechado(biblioteca).
-ambiente_fechado(cafe).
-ambiente_fechado(sala_estudo).
-ambiente_aberto(apartamento_amigo).
-
-% --- Regra de adequação com suporte a clima e horário
+% Regras de adequação com clima e horário
 adequado(Lugar, Clima, Horario) :-
     lugar(Lugar),
     silencioso(Lugar),
     tem_wifi(Lugar),
     espacoso(Lugar),
     proximo(Lugar),
-    (
-        horario_funcionamento(Lugar, Horario);
-        horario_funcionamento(Lugar, qualquer)
-    ),
+    horario_funcionamento(Lugar, Horario),
     (
         Clima = ensolarado;
-        (Clima = chuvoso, ambiente_fechado(Lugar))
+        (Clima = chuvoso, not(barulhento(Lugar)))
     ).
 
-% --- Regra de pontuação com pesos e correção de variáveis singleton
+% Regras de pontuação com pesos
 pontuacao(Lugar, P) :-
     lugar(Lugar),
     (silencioso(Lugar) -> S = 3 ; S = 0),
