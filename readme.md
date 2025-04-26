@@ -25,7 +25,7 @@ Siga os passos abaixo para configurar e executar o projeto:
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/trabalho_agente_inteligente.git
+git clone https://github.com/michelfviana/trabalho_agente_inteligente.git
 cd trabalho_agente_inteligente
 ```
 
