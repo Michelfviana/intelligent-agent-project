@@ -29,13 +29,23 @@ class AgenteEscolhaLocal:
 
 # Execução do programa
 if __name__ == "__main__":
-    agente = AgenteEscolhaLocal(clima="chuvoso", horario="tarde")
-    locais = agente.locais_adequados()
+    # Pergunta ao usuário o clima e o horário
+    clima = input("Digite o clima (ensolarado ou chuvoso): ").strip().lower()
+    horario = input("Digite o horário (manha, tarde, noite ou qualquer): ").strip().lower()
 
-    if locais:
-        print("\nLocais adequados com pontuação:")
-        pontuados = agente.avaliar_pontuacao(locais)
-        for lugar, pontos in pontuados:
-            print(f"- {lugar} (Pontuação: {pontos})")
+    # Valida as entradas
+    if clima not in ["ensolarado", "chuvoso"]:
+        print("Clima inválido! O clima deve ser 'ensolarado' ou 'chuvoso'.")
+    elif horario not in ["manha", "tarde", "noite", "qualquer"]:
+        print("Horário inválido! O horário deve ser 'manha', 'tarde', 'noite' ou 'qualquer'.")
     else:
-        print("Nenhum local adequado foi encontrado.")
+        agente = AgenteEscolhaLocal(clima=clima, horario=horario)
+        locais = agente.locais_adequados()
+
+        if locais:
+            print("\nLocais adequados com pontuação:")
+            pontuados = agente.avaliar_pontuacao(locais)
+            for lugar, pontos in pontuados:
+                print(f"- {lugar} (Pontuação: {pontos})")
+        else:
+            print("Nenhum local adequado foi encontrado.")

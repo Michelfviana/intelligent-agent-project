@@ -8,7 +8,7 @@ lugar(apartamento_amigo).
 silencioso(biblioteca).
 silencioso(sala_estudo).
 barulhento(cafe).
-barulhento(apartamento_amigo).
+not(barulhento(apartamento_amigo)).
 
 tem_wifi(biblioteca).
 tem_wifi(cafe).
@@ -16,8 +16,9 @@ tem_wifi(apartamento_amigo).
 
 espacoso(biblioteca).
 espacoso(sala_estudo).
+espacoso(apartamento_amigo).  % Agora os fatos relacionados ao "espaçoso" estão juntos
+
 apertado(cafe).
-apertado(apartamento_amigo).
 
 proximo(sala_estudo).
 proximo(apartamento_amigo).
@@ -32,7 +33,6 @@ horario_funcionamento(apartamento_amigo, qualquer).
 % Regras de adequação com clima e horário
 adequado(Lugar, Clima, Horario) :-
     lugar(Lugar),
-    silencioso(Lugar),
     tem_wifi(Lugar),
     espacoso(Lugar),
     proximo(Lugar),
