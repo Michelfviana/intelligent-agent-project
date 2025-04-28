@@ -15,9 +15,9 @@ tem_wifi(cafe).
 tem_wifi(apartamento_amigo).
 
 espacoso(biblioteca).
-espacoso(sala_estudo).
 espacoso(apartamento_amigo).
 
+apertado(sala_estudo).
 apertado(cafe).
 
 proximo(sala_estudo).
