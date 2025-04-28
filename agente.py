@@ -20,7 +20,7 @@ class AgenteEscolhaLocal:
         Retorna uma lista de locais.
         """
         # Monta a consulta Prolog para verificar locais adequados
-        query = f"adequado(Lugar, {self.clima}, {self.horario})"
+        query = f"adequado('Lugar', '{self.clima}', '{self.horario}')"
         print(f"Consultando: {query}")
         # Executa a consulta no Prolog e converte os resultados em uma lista
         resultados = list(self.prolog.query(query))
@@ -35,7 +35,7 @@ class AgenteEscolhaLocal:
         locais_pontuados = []  # Lista para armazenar os locais com suas pontuações
         for lugar in locais:
             # Monta a consulta Prolog para obter a pontuação do local
-            query = f"pontuacao({lugar}, P)"
+            query = f"pontuacao('{lugar}', 'P')"
             # Executa a consulta no Prolog
             resultado = list(self.prolog.query(query))
             if resultado:
