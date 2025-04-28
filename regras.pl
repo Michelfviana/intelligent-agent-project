@@ -25,8 +25,8 @@ proximo(apartamento_amigo).
 longe(biblioteca).
 longe(cafe).
 
-horario_funcionamento(biblioteca, manha).
-horario_funcionamento(cafe, tarde).
+horario_funcionamento(biblioteca, noite).
+horario_funcionamento(cafe, manha).
 horario_funcionamento(sala_estudo, noite).
 horario_funcionamento(apartamento_amigo, qualquer).
 
