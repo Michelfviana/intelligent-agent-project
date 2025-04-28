@@ -79,3 +79,9 @@ O agente irá consultar os locais adequados com base no clima e horário definid
 - `regras.pl`: Arquivo Prolog contendo as regras de inferência e fatos sobre os locais.
 - `requirements.txt`: Arquivo contendo as dependências do projeto.
 - `README.md`: Este arquivo, contendo informações sobre o projeto e como utilizá-lo.
+
+<div align="center">
+  <h3>Fluxograma do Funcionamento do Agente Inteligente</h3>
+  <img src="fluxograma.png" alt="Fluxograma do projeto" width="auto">
+  <p>Figura 1: Representação do fluxo de funcionamento do agente inteligente.</p>
+</div>
