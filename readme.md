@@ -1,87 +1,95 @@
-# Agente Inteligente para Escolha de Local
+Certainly, senhor Michel. Below is the full translation of your project documentation into English:
 
-Este projeto implementa um agente inteligente que auxilia na escolha do local mais adequado para realizar atividades, considerando características como clima, horário e ambiente. Utiliza a linguagem de programação Python e o sistema lógico Prolog para inferência de regras.
+---
 
-## 🛠️ Tecnologias Utilizadas
+# Intelligent Agent for Location Selection
 
-- **Python**: Linguagem de programação principal.
-- **PySwip**: Biblioteca Python para o SWI-Prolog.
-- **SWI-Prolog**: Sistema lógico utilizado para inferência de regras.
+This project implements an intelligent agent that assists in choosing the most suitable location for activities, considering characteristics such as weather, time, and environment. It uses the Python programming language and the Prolog logic system for rule inference.
 
-## 📦 Pré-requisitos
+## 🛠️ Technologies Used
 
-Antes de rodar o projeto, é necessário:
+* **Python**: Main programming language.
+* **PySwip**: Python library for SWI-Prolog.
+* **SWI-Prolog**: Logic system used for rule inference.
 
-1. **Instalar o SWI-Prolog**: Baixe e instale o SWI-Prolog a partir do [site oficial](https://www.swi-prolog.org/Download.html).
+## 📦 Prerequisites
 
-2. **Instalar o Python 3.8 ou superior**: Certifique-se de que o Python esteja instalado em sua máquina. Você pode verificar isso executando `python --version` ou `python3 --version` no terminal.
+Before running the project, you need to:
 
-3. **Instalar o `pip`**: O `pip` é o gerenciador de pacotes do Python. Caso não o tenha, siga as instruções em [https://pip.pypa.io/en/stable/installation/](https://pip.pypa.io/en/stable/installation/).
+1. **Install SWI-Prolog**: Download and install SWI-Prolog from the [official website](https://www.swi-prolog.org/Download.html).
 
-## 🚀 Como Rodar o Projeto
+2. **Install Python 3.8 or higher**: Ensure Python is installed on your machine. You can verify this by running `python --version` or `python3 --version` in the terminal.
 
-Siga os passos abaixo para configurar e executar o projeto:
+3. **Install `pip`**: `pip` is Python’s package manager. If you don’t have it installed, follow the instructions at [https://pip.pypa.io/en/stable/installation/](https://pip.pypa.io/en/stable/installation/).
 
-### 1. Clone o repositório
+## 🚀 How to Run the Project
+
+Follow the steps below to set up and run the project:
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/michelfviana/trabalho_agente_inteligente.git
 cd trabalho_agente_inteligente
 ```
 
-### 2. Crie e ative um ambiente virtual
+### 2. Create and activate a virtual environment
 
-#### No Windows 11 (PowerShell)
+#### On Windows 11 (PowerShell)
 
 ```bash
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
-#### No Linux/macOS
+#### On Linux/macOS
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-*Nota:* O uso de ambientes virtuais é recomendado para isolar as dependências do projeto.
+*Note:* The use of virtual environments is recommended to isolate project dependencies.
 
-### 3. Instale as dependências
+### 3. Install the dependencies
 
-Se você ainda não tem um arquivo `requirements.txt`, pode gerar um com o seguinte comando:
+If you don’t already have a `requirements.txt` file, you can generate one with the following command:
 
 ```bash
 pip freeze > requirements.txt
 ```
 
-Em seguida, instale as dependências:
+Then, install the dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Verifique se o arquivo `regras.pl` está presente
+### 4. Ensure the `regras.pl` file is present
 
-Este arquivo contém as regras Prolog necessárias para o funcionamento do agente.
+This file contains the necessary Prolog rules for the agent's functionality.
 
-### 5. Execute o script Python
+### 5. Run the Python script
 
 ```bash
 python agente.py
 ```
 
-O agente irá consultar os locais adequados com base no clima e horário definidos no código.
+The agent will query the appropriate locations based on the weather and time defined in the code.
 
-## 📄 Estrutura do Projeto
+## 📄 Project Structure
 
-- `agente.py`: Script principal que contém a implementação do agente inteligente.
-- `regras.pl`: Arquivo Prolog contendo as regras de inferência e fatos sobre os locais.
-- `requirements.txt`: Arquivo contendo as dependências do projeto.
-- `README.md`: Este arquivo, contendo informações sobre o projeto e como utilizá-lo.
+* `agente.py`: Main script containing the implementation of the intelligent agent.
+* `regras.pl`: Prolog file containing inference rules and facts about locations.
+* `requirements.txt`: File listing the project's dependencies.
+* `README.md`: This file, containing information about the project and how to use it.
 
 <div align="center">
-  <h3>Fluxograma do Funcionamento do Agente Inteligente</h3>
-  <img src="fluxograma.png" alt="Fluxograma do projeto" width="auto">
-  <p>Figura 1: Representação do fluxo de funcionamento do agente inteligente.</p>
+  <h3>Intelligent Agent Operation Flowchart</h3>
+  <img src="fluxograma.png" alt="Project flowchart" width="auto">
+  <p>Figure 1: Representation of the intelligent agent's operation flow.</p>
 </div>
+
+---
+
+Caso deseje, posso também auxiliá-lo na conversão para um `README.md` em inglês ou revisar o conteúdo em termos de clareza e estrutura.
