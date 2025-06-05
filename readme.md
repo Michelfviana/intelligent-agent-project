@@ -84,12 +84,15 @@ The agent will query the appropriate locations based on the weather and time def
 * `requirements.txt`: File listing the project's dependencies.
 * `README.md`: This file, containing information about the project and how to use it.
 
-<div align="center">
-  <h3>Intelligent Agent Operation Flowchart</h3>
-  <img src="fluxograma.png" alt="Project flowchart" width="auto">
-  <p>Figure 1: Representation of the intelligent agent's operation flow.</p>
-</div>
+## Location Suitability Assessment Flow
 
----
-
-Caso deseje, posso também auxiliá-lo na conversão para um `README.md` em inglês ou revisar o conteúdo em termos de clareza e estrutura.
+```mermaid
+flowchart TD
+    A[Suitable Location, Climate, Schedule] --> B{Location<br/>Suitable?}
+    B -->|Yes| C[temp_wifi Location]
+    B -->|No| A
+    C --> D{Suitable<br/>Climate Location,<br/>Climate?}
+    D -->|Yes| E[suitable_schedule<br/>Location, Schedule]
+    D -->|No| A
+    E --> F[Suitable Location]
+    F --> A
