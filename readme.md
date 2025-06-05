@@ -1,7 +1,3 @@
-Certainly, senhor Michel. Below is the full translation of your project documentation into English:
-
----
-
 # Intelligent Agent for Location Selection
 
 This project implements an intelligent agent that assists in choosing the most suitable location for activities, considering characteristics such as weather, time, and environment. It uses the Python programming language and the Prolog logic system for rule inference.
